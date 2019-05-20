@@ -29,7 +29,7 @@ class SRCNN:
         optimizer = Adam(lr=self.learning_rate)
         model.compile(optimizer=optimizer, loss='mean_squared_error', metrics=['accuracy'])
         return model
-    
+     
     def train(self, X_train, Y_train):
         history = self.model.fit(X_train, Y_train, batch_size=self.batch_size, epochs=self.epochs, verbose=1, validation_split=0.1)
         if self.is_training:
