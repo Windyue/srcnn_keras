@@ -43,7 +43,7 @@ class SRCNN:
     def load(self):
         weight_filename = 'srcnn_weight.hdf5'
         model = self.build_model()
-        model.load_weights(os.path.join('./model/',weight_filename))
+        model.load_weights(os.path.join('/content/drive/My Drive/GoogleAI/SRCNN/model/srcnn_weight.hdf5',weight_filename))
         return model
 
     def save(self):
